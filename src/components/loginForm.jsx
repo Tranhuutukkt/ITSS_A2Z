@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./form";
-import {schema} from "../utils/userSchema";
+import {loginSchema} from "../utils/userSchema";
 import auth from "../services/authService";
 import {Link, Redirect} from "react-router-dom";
 
@@ -10,7 +10,7 @@ class LoginForm extends Form{
         errors: {}
     }
 
-    schema = schema;
+    schema = loginSchema;
 
     doSubmit = async () => {
         const {data} = this.state;
@@ -39,7 +39,6 @@ class LoginForm extends Form{
                     {this.renderInput('email', 'Email')}
                     {this.renderInput('password', 'Password', 'password')}
                     <p>Don't have an account? <Link to='/register'>Register here!</Link></p>
-
                     {this.renderButton('Login')}
                 </form>
             </div>

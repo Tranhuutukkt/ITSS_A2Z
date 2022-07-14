@@ -2,7 +2,7 @@ import React from "react";
 import auth from "../services/authService";
 import Form from "./form";
 import {register} from "../services/userService";
-import {schema} from "../utils/userSchema";
+import {registerSchema} from "../utils/userSchema";
 
 class RegisterForm extends Form{
     state = {
@@ -10,7 +10,7 @@ class RegisterForm extends Form{
         errors: {}
     }
 
-    schema = schema;
+    schema = registerSchema;
 
     doSubmit = async () => {
         try {
@@ -38,7 +38,7 @@ class RegisterForm extends Form{
                     {this.renderInput('name', 'Full name')}
                     {this.renderInput('password', 'Password', 'password')}
                     {this.renderSelect('role', 'You are ', this.option)}
-                    {this.renderButton('RegisterForm')}
+                    {this.renderButton('Register')}
                 </form>
             </div>
         );
