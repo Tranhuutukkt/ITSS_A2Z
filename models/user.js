@@ -43,6 +43,9 @@ const userSchema = new mongoose.Schema({
     studentCode: {
         type: String,
         length: 8
+    },
+    gender: {
+        type: Boolean //0: female, 1: male
     }
 });
 
