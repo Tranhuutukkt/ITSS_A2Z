@@ -32,6 +32,7 @@ jobs:
           output_location: "build" # Built app content directory - optional
         env:
           REACT_APP_API_URL: http://localhost:5555
+          CI: false
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
