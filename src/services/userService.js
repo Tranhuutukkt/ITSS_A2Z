@@ -1,4 +1,5 @@
 import http from "./httpService";
+import {getCurrentUser, getJwt} from "./authService";
 
 const apiEndpoint = '/users'
 
@@ -15,6 +16,9 @@ export function profileEdit(user) {
     return http.put(apiEndpoint + '/me', user);
 }
 
-export function getProfile(){
-    return http.get(apiEndpoint + '/me');
+export async function getProfile(){
+    const {data} = await http.get(apiEndpoint + '/me', {
+        headers: {'x-auth-token': getJwt()}
+    });
+    return data;
 }

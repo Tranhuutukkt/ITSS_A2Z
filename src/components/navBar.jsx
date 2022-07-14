@@ -13,7 +13,7 @@ const NavBar = ({user}) => {
     }
 
     return (
-        <Navbar expanded={expanded} bg="light" expand="sm" className='nav-justified'>
+        <Navbar expanded={expanded} bg="light" expand="sm">
             <Container>
                 <Link to='/' className='navbar-brand'>A2Z</Link>
                 <Navbar.Toggle

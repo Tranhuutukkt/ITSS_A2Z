@@ -50,7 +50,8 @@ class Form extends Component{
         return (
             <button
                 disabled={this.validate()}
-                className='btn btn-primary btn-sm'
+                className='btn btn-primary'
+                type='submit'
             >{label}
             </button>
         )
@@ -64,7 +65,7 @@ class Form extends Component{
                 <input
                     id={name}
                     name={name}
-                    className='form-control form-group'
+                    className='form-control'
                     type={type}
                     value={data[name]}
                     label={label}

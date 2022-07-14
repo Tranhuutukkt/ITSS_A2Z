@@ -27,7 +27,7 @@ function App() {
             <Route path='/logout' component={Logout}/>
             <Route path='/posts' component={Posts}/>
             <Route path='/chat' component={Chat}/>
-            <Route path='/me' component={MyProfile}/>
+            <Route path='/me' render={() => <MyProfile user={user}/>}/>
             <Route path='/admin' component={Admin}/>
             <Redirect to='/posts'/>
         </Switch>
