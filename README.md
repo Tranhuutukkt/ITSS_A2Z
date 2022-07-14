@@ -1,4 +1,5 @@
 # ITSS_A2Z
+# Branch: server
 ## Environment variable (/.env):
 SER_PORT=<your_server_port> (eg. 3000)\
 DB=<your_mongodb_url> (eg. "mongodb://localhost:27017/")\
