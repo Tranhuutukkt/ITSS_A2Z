@@ -4,10 +4,12 @@ import {Redirect, Route, Switch} from "react-router-dom";
 import RegisterForm from "./components/registerForm";
 import LoginForm from "./components/loginForm";
 import Logout from "./components/logout";
+import NavBar from "./components/navBar";
 
 function App() {
   return (
     <React.Fragment>
+      <NavBar/>
       <main className='container-fluid'>
         <Switch>
           <Route path='/register' component={RegisterForm}/>

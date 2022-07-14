@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import 'animate.css/animate.min.css';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
 import './index.css';
 
 AOS.init();
