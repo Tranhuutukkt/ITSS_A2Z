@@ -15,6 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.navbar-nav .nav-link.active {
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #5fcf80;
+  transition: 0.3s;
+}
 
 .alert {
   position: relative;
