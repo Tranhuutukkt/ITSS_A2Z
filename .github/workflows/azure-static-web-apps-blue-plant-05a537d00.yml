@@ -31,7 +31,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "build" # Built app content directory - optional
         env:
-          REACT_APP_API_URL: http://localhost:5555
+          REACT_APP_API_URL: https://a2z-itss-server.herokuapp.com
           CI: false
           ###### End of Repository/Build Configurations ######
 

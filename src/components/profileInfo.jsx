@@ -18,6 +18,7 @@ function ProfileInfo() {
     const coverBackground = user.coverUrl ?
         {backgroundImage: 'url(' + user.coverUrl + ')'} :
         {backgroundColor: '#5fcf80'};
+    const defaultAvatar = 'https://cdn-icons.flaticon.com/png/512/927/premium/927711.png?token=exp=1658338529~hmac=a01cf005f22ee323864103da98e86b4a';
 
     return (
         <React.Fragment>
@@ -27,6 +28,7 @@ function ProfileInfo() {
                 className='d-flex justify-content-center align-items-center'
             >
                 <div className='container position-relative' data-aos='zoom-in' data-aos-delay='100'>
+                    <img src={user.avatarUrl || defaultAvatar} className='rounded-circle' width='100px' height='100px' alt='my avatar'></img>
                     <h1>{user.name}</h1>
                 </div>
             </section>
@@ -46,7 +48,7 @@ function ProfileInfo() {
                     </div>
                     <div className='text-center'>
                         <button className='btn btn-primary' type='submit'>
-                            <i className="fa-solid fa-pen me-3" style={{color: 'orange'}}></i>
+                            <i className="fa-solid fa-pen me-3" style={{color: 'white'}}></i>
                             Edit
                         </button>
                     </div>

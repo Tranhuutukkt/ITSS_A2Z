@@ -1,5 +1,5 @@
 import http from "./httpService";
-import {getCurrentUser, getJwt} from "./authService";
+import {getJwt} from "./authService";
 
 const apiEndpoint = '/users'
 
