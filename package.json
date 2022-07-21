@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
-    "start": "nodemon"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
