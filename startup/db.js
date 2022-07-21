@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const winston = require('winston')
 
 module.exports = function () {
     const uri = process.env.DB;
     mongoose.connect(uri).then(
-        () => console.log(`Connect to ${uri}... `),
+        () => winston.info(`Connect to ${uri}... `),
     )
 };
