@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -19,13 +19,12 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: '15.x'
 
       - name: npm install, build, and test
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
+          npm start
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -54,3 +53,8 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7D88A5F6D2514087B011FACF44327E0B }}
           package: .
+        env:
+          SER_PORT: 5555
+          DB: mongodb://a2z-itss:7l6fW9fAJ2bz1MTwsXmhEdUzvrMAq4TjrzXFOkxEn81zKQDwvhMQymAel8Z64gQqkYLYDU12E1OmhtFGAShm5w==@a2z-itss.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@a2z-itss@
+          JWTKEY: itss-04
+          AUTH: true
