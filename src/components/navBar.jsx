@@ -21,7 +21,7 @@ const NavBar = ({user}) => {
                     onClick={() => setExpanded(expanded ? false : 'expanded')}
                 />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" className='nav-justified w-100'>
+                    <Nav className='me-auto nav-justified w-100'>
                         {user && (user.role === 'admin') && (
                             <Nav.Link as={NavLink} to='/admin' onClick={doItemClick}>Admin</Nav.Link>
                         )}

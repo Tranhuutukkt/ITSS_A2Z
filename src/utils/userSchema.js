@@ -3,7 +3,7 @@ import Joi from "joi";
 export const registerSchema = {
     email: Joi.string().required().email({tlds: {allow: false}}).label('Email'),
     password: Joi.string().required().min(8).label('Password'),
-    name: Joi.string().required().pattern(/^[a-zA-Z\s]*$/).label('Name'),
+    name: Joi.string().required().label('Name'),
     role: Joi.string().required().label('You are')
 }
 
@@ -20,3 +20,12 @@ export const profileList = [
     {label: 'role', icon: 'fa-solid fa-dice-d6', name: 'Role'},
     {label: 'studentCode', icon: 'fa-solid fa-id-card', name: 'Student code'}
 ];
+
+export const profileSchema = {
+    studentCode: Joi.string().required().label('Student Code'),
+    class: Joi.string().required().label('Class'),
+    name: Joi.string().required().label('Name'),
+    faculty: Joi.string().required().label("Faculty"),
+    gender: Joi.boolean().label("Gender"),
+    email: Joi.string().required().email({tlds: {allow: false}}).label('Email')
+}

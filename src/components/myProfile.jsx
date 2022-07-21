@@ -4,6 +4,7 @@ import MyTab from "./myTab";
 import {Redirect, Route, Switch} from "react-router-dom";
 import ProfileInfo from "./profileInfo";
 import Posts from "./posts";
+import ProfileEdit from "./profileEdit";
 
 function MyProfile({user}) {
     const tabList = [
@@ -28,6 +29,7 @@ function MyProfile({user}) {
                 )}
                 <Switch>
                     <Route path='/me/profile' exact component={ProfileInfo}/>
+                    <Route path='/me/profile/edit' exact component={ProfileEdit}/>
                     <Route path='/me/posts' exact component={Posts}/>
                     {/*<Redirect to='/me/profile'/>*/}
                 </Switch>

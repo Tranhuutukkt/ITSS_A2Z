@@ -146,13 +146,13 @@ code {
   color: #fff;
 }
 
-.profile-info button[type=submit] {
+.profile-info button {
   background: #5fcf80;
   border: 0;
   color: #fff;
   border-radius: 5px;
 }
-.profile-info button[type=submit]:hover {
+.profile-info button:hover {
   background: #3ac162;
 }
 

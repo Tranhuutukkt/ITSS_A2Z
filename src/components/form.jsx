@@ -95,7 +95,7 @@ class Form extends Component{
                 >
                     <option defaultValue>Choose an option</option>
                     {options.map(op => (
-                        <option key={op.id} value={op.name}>{op.name}</option>
+                        <option key={op.id} value={op.id}>{op.name}</option>
                     ))}
                 </select>
                 {errors[name] && <div className='alert alert-danger'>{errors[name]}</div>}

@@ -27,7 +27,7 @@ class RegisterForm extends Form{
         }
     }
 
-    option = [{id: 1, name: 'student'}, {id: 2, name: 'teacher'}];
+    option = [{id: 'student', name: 'student'}, {id: 'teacher', name: 'teacher'}];
 
     render() {
         return (

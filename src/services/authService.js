@@ -38,6 +38,5 @@ export default {
     login,
     loginWithJwt,
     logout,
-    getCurrentUser,
-    getJwt
+    getCurrentUser
 }

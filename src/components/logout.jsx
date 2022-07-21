@@ -1,4 +1,3 @@
-import React from "react";
 import auth from "../services/authService";
 
 function Logout() {
