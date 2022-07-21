@@ -1,0 +1,2 @@
+{"level":"info","message":"Listening to port 5555... "}
+{"level":"info","message":"Connect to mongodb://a2z-itss:7l6fW9fAJ2bz1MTwsXmhEdUzvrMAq4TjrzXFOkxEn81zKQDwvhMQymAel8Z64gQqkYLYDU12E1OmhtFGAShm5w==@a2z-itss.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@a2z-itss@... "}

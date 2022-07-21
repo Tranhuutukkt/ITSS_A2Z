@@ -11,7 +11,7 @@ require('./startup/db')();
 require('./startup/logging')();
 require('./startup/routers')(app);
 
-const port = process.env.SER_PORT || 5555;
+const port = process.env.PORT || 5555;
 
 const server = app.listen(port, () => winston.info(`Listening to port ${port}... `));
 
