@@ -32,16 +32,12 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/me', async (req, res) => {
-    // const {error} = validate(req.body);
-    // if (error) return res.status(400).send(error.details[0].message);
-
     const data = await User.findOne({email: req.body.email});
     let user = {};
     if (!data) return res.status(404).send('User not found!');
 
-    const list = ['name', 'class', 'avatarUrl', 'coverUrl', 'faculty', 'studentCode'];
+    const list = ['name', 'class', 'avatarUrl', 'coverUrl', 'faculty', 'studentCode', 'gender'];
     list.map((l) => {
-        if (!userSchema.path(l)) userSchema.add({[l]: String});
         if (!req.body[l])
             user[l] = data[l];
         user[l] = req.body[l];
@@ -54,7 +50,7 @@ router.put('/me', async (req, res) => {
     );
 
     console.log(user);
-    res.send(user);
+    res.send(data);
 })
 
 module.exports = router;
