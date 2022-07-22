@@ -4,7 +4,7 @@ function ProfileImage({user}) {
     const coverBackground = user.coverUrl ?
         {backgroundImage: 'url(' + user.coverUrl + ')'} :
         {backgroundColor: '#5fcf80'};
-    const defaultAvatar = process.env.REACT_APP_AVATAR;
+    const defaultAvatar = 'https://a2zitss.blob.core.windows.net/tutorial-container/Avatar.png';
 
     return (
         <section

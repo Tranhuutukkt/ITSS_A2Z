@@ -10,6 +10,7 @@ import Chat from "./components/chat";
 import auth from "./services/authService";
 import MyProfile from "./components/myProfile";
 import Admin from "./components/admin";
+import FileUpload from "./components/fileUpload";
 
 function App() {
     const [user, setUser] = useState({});
@@ -25,10 +26,11 @@ function App() {
             <Route path='/register' component={RegisterForm}/>
             <Route path='/login' component={LoginForm}/>
             <Route path='/logout' component={Logout}/>
-            <Route path='/posts' component={Posts}/>
+            <Route path='/posts' render={() => <Posts user={user}/>}/>
             <Route path='/chat' component={Chat}/>
             <Route path='/me' render={() => <MyProfile user={user}/>}/>
             <Route path='/admin' component={Admin}/>
+            <Route path='/storage' component={FileUpload}/>
             <Redirect to='/posts'/>
         </Switch>
       </main>

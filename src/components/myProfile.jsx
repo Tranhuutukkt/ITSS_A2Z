@@ -30,7 +30,7 @@ function MyProfile({user}) {
                 <Switch>
                     <Route path='/me/profile' exact component={ProfileInfo}/>
                     <Route path='/me/profile/edit' exact component={ProfileEdit}/>
-                    <Route path='/me/posts' exact component={Posts}/>
+                    <Route path='/me/posts' render={() => <Posts user={user}/>}/>
                     {/*<Redirect to='/me/profile'/>*/}
                 </Switch>
             </main>
