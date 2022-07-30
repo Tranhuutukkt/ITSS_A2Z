@@ -1,7 +1,7 @@
 import React from "react";
-import Form from "./form";
-import {loginSchema} from "../utils/userSchema";
-import auth from "../services/authService";
+import Form from "../common/form";
+import {loginSchema} from "../../utils/userSchema";
+import auth from "../../services/authService";
 import {Link, Redirect} from "react-router-dom";
 
 class LoginForm extends Form{

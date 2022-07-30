@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {getProfile} from "../services/userService";
-import {profileList} from "../utils/userSchema";
+import {getProfile} from "../../services/userService";
+import {profileList} from "../../utils/userSchema";
 import {Link} from "react-router-dom";
 import ProfileImage from "./profileImage";
 

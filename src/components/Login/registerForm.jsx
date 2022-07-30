@@ -1,8 +1,8 @@
 import React from "react";
-import auth from "../services/authService";
-import Form from "./form";
-import {register} from "../services/userService";
-import {registerSchema} from "../utils/userSchema";
+import auth from "../../services/authService";
+import Form from "../common/form";
+import {register} from "../../services/userService";
+import {registerSchema} from "../../utils/userSchema";
 
 class RegisterForm extends Form{
     state = {
@@ -31,16 +31,19 @@ class RegisterForm extends Form{
 
     render() {
         return (
-            <div data-aos="fade-up" className="form-block">
-                <h1>Register</h1>
-                <form onSubmit={this.handleSubmit} className='form'>
-                    {this.renderInput('email', 'Email')}
-                    {this.renderInput('name', 'Full name')}
-                    {this.renderInput('password', 'Password', 'password')}
-                    {this.renderSelect('role', 'You are ', this.option)}
-                    {this.renderButton('Register')}
-                </form>
-            </div>
+            <React.Fragment>
+                <div data-aos="fade-up" className="form-block">
+                    <h1>Register</h1>
+                    <form onSubmit={this.handleSubmit} className='form'>
+                        {this.renderInput('email', 'Email')}
+                        {this.renderInput('name', 'Full name')}
+                        {this.renderInput('password', 'Password', 'password')}
+                        {this.renderSelect('role', 'You are ', this.option)}
+                        {this.renderButton('Register')}
+                    </form>
+                </div>
+            </React.Fragment>
+
         );
     }
 }

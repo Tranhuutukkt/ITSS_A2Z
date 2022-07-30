@@ -1,10 +1,8 @@
-import React, {useState, useEffect} from "react";
-import {getProfile, profileEdit} from "../services/userService";
-import {profileSchema} from "../utils/userSchema";
+import React from "react";
+import {getProfile, profileEdit} from "../../services/userService";
+import {profileSchema} from "../../utils/userSchema";
 import ProfileImage from "./profileImage";
-import Joi from "joi";
-import {useHistory} from "react-router-dom";
-import Form from "./form";
+import Form from "../common/form";
 
 class ProfileEdit extends Form {
     state = {

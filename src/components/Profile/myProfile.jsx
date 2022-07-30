@@ -1,9 +1,9 @@
 import React from "react";
-import {getCurrentUser} from "../services/authService";
-import MyTab from "./myTab";
+import {getCurrentUser} from "../../services/authService";
+import MyTab from "../common/myTab";
 import {Redirect, Route, Switch} from "react-router-dom";
 import ProfileInfo from "./profileInfo";
-import Posts from "./posts";
+import Posts from "../Post/posts";
 import ProfileEdit from "./profileEdit";
 
 function MyProfile({user}) {

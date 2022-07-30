@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import uploadFileToBlob ,{isStorageConfigured} from '../services/storage';
+import uploadFileToBlob ,{isStorageConfigured} from '../../services/storage';
 const storageConfigured = isStorageConfigured();
 
 function FileUpload({data}) {

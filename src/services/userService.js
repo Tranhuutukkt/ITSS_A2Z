@@ -13,6 +13,7 @@ export function register(user) {
 }
 
 export function profileEdit(user) {
+    console.log(user);
     return http.put(apiEndpoint + '/me', user);
 }
 
@@ -20,5 +21,10 @@ export async function getProfile(){
     const {data} = await http.get(apiEndpoint + '/me', {
         headers: {'x-auth-token': getJwt()}
     });
+    return data;
+}
+
+export async function getProfileById(userId){
+    const {data} = await http.get(apiEndpoint + '/' + userId);
     return data;
 }

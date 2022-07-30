@@ -29,3 +29,10 @@ export const profileSchema = {
     gender: Joi.boolean().label("Gender"),
     email: Joi.string().required().email({tlds: {allow: false}}).label('Email')
 }
+
+export const postSchema = {
+    header: Joi.string().required(),
+    text: Joi.string().required(),
+    userId: Joi.string().required(),
+    mediaUrl: Joi.array()
+}
