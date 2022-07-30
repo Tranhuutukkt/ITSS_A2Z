@@ -11,6 +11,16 @@ router.get('/me', auth, async (req, res) => {
     res.send(user);
 });
 
+router.get('/:id', async (req, res) => {
+    const token = req.header('x-auth-token');
+    let user;
+    if (token)
+        user = await User.findById(req.params.id).select('-password -role');
+    else
+        user = await User.findById(req.params.id).select('name avatarUrl coverUrl');
+    res.send(user);
+});
+
 router.post('/', async (req, res) => {
     const {error} = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
@@ -48,8 +58,6 @@ router.put('/me', async (req, res) => {
         user,
         {new: true, upsert: true}
     );
-
-    console.log(user);
     res.send(data);
 })
 
